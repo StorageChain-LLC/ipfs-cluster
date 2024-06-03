@@ -79,7 +79,9 @@ export const add = async (cluster, file, options = {}) => {
       onUploadProgress: options.onUploadProgress,
     });
     const fileResult = result.data
+    console.log('add ~ fileResult:', fileResult)
     const data = params['stream-channels'] ? fileResult : fileResult[0]
+    console.log('add ~ data:', data)
     return { ...data, cid: data.cid }
   } catch (err) {
     const error = /** @type {Error & {response?:Response}}  */ (err)
