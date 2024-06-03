@@ -496,7 +496,7 @@ const encodeAddParams = (options = {}) =>
     // stream-channels=false means buffer entire response in cluster before returning.
     // MAY avoid weird edge-cases with prematurely closed streams
     // see: https://github.com/web3-storage/web3.storage/issues/323
-    'stream-channels':
+    'streamChannels':
       options.streamChannels != null ? options.streamChannels : false,
     format: options.format,
     // IPFSAddParams
@@ -517,8 +517,8 @@ const encodePinOptions = (options = {}) =>
   encodeParams({
     name: options.name,
     mode: options.mode,
-    'replication-min': options.replicationFactorMin,
-    'replication-max': options.replicationFactorMax,
+    'replicationMin': options.replicationFactorMin,
+    'replicationMax': options.replicationFactorMax,
     'shard-size': options.shardSize,
     'user-allocations': options.userAllocations?.join(','),
     'expire-at': options.expireAt?.toISOString(),
