@@ -42,6 +42,7 @@ export interface PinOptions extends RequestOptions {
    * List of multiaddrs known to provide the data.
    */
   origins?: string[]
+  local?: boolean
 }
 
 /**

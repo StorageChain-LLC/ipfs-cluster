@@ -519,8 +519,9 @@ const encodePinOptions = (options = {}) =>
   encodeParams({
     name: options.name,
     mode: options.mode,
-    'replicationMin': options.replicationFactorMin,
-    'replicationMax': options.replicationFactorMax,
+    local: options.local,
+    'replicationFactorMin': options.replicationFactorMin,
+    'replicationFactorMax': options.replicationFactorMax,
     'shard-size': options.shardSize,
     'user-allocations': options.userAllocations?.join(','),
     'expire-at': options.expireAt?.toISOString(),
